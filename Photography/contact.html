@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="stylesheets/stylesheet.css">
+</head>
+<body>
+    <main>
+        <div class="text-box">
+            <header>
+                <h1 id="page-title">Contact Me</h1>
+            </header>
+            <nav class="navcontainer"> 
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="camera.html" class="nav-link">Camera</a>
+                <a href="location.html" class="nav-link">Location</a>
+                <a href="photo.html" class="nav-link">Photo</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            </div>
+        <form action="/submit-your-info" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="photo">Upload a photo:</label>
+                <input type="file" id="photo" name="photo" accept="image/*">
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+</body>
+</html>

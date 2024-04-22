@@ -1,0 +1,225 @@
+/* Global styles */
+.text-box {
+    background-color: rgba(255, 255, 255, 0.5); /* White background with 80% opacity */
+    padding: 15px; /* Add some padding around the text */
+    margin: 20px; /* Add some margin for spacing */
+    border-radius: 5px; /* rounds the corners of the background */
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    color: #333; /* Dark grey text color for better contrast */
+    background-image: url('../images/47672864.jpg'); /* Path to background image */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the background image */
+    display: flex; /* Set display to flex */
+    flex-direction: column; /* Stacks content vertically */
+}
+body {
+    background-image: 
+        linear-gradient(to bottom, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%), /* Gradient overlay */
+        url('../images/47672864.jpg'); /* Path to your background image */
+    background-size: cover; /* Cover the entire viewport without repeating */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the background image */
+}
+
+header {
+    text-align: center; /* Center the header content */
+    margin-top: 50px; 
+}
+
+#page-title {
+    font-size: 2.5em; /* Large title text */
+}
+
+.navcontainer {
+    display: flex;
+    flex-direction: row; /* Ensures that nav items are in a row on large screens */
+    justify-content: center; /* Center navigation links horizontally */
+    padding: 20px 0; /* Padding above and below the links */
+    border-top: 2px solid black; /* Black line above the navigation tabs */
+}
+
+.nav-link {
+    margin: 0 20px; /* Space out the links */
+    text-decoration: none; /* Remove underline from links */
+    color: black; /* Set link color */
+    font-size: 1.2em; /* Larger link text */
+}
+
+.nav-link:hover {
+    color: #555; /* Darker grey text on hover */
+}
+
+/* Main content area styles */
+main {
+    padding: 20px;
+    text-align: center; /* Center the main content text */
+    flex: 1; /* Allows the main content to grow and take up available space, pushing the footer down */
+}
+
+.camera-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #ccc; /* Light gray line for separation */
+}
+
+.camera-description {
+    width: 45%;
+    background-color: rgba(255, 255, 255, 0.5); /* White background with 80% opacity */
+    padding: 15px; /* Add some padding around the text */
+    margin: 20px; /* Add some margin for spacing */
+    border-radius: 5px; /* rounds the corners of the background */
+}
+
+.camera-image {
+    width: 30%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* for rounded corners */
+    padding: 10px; /* Padding around the image inside its container */
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* adds shadow for better depth */
+    margin: 5px; /* Ensures spacing around the image */
+    display: block; /* Ensures proper box handling */
+}
+
+.site-footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: rgba(255, 255, 255, 0.5); /* Light grey background with 50% transparency */
+    color: #333; /* Dark text color for contrast */
+    font-size: 0.8em;
+    border-top: 1px solid #ccc; /* Adds a subtle line above the footer for separation */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box; /* Ensures padding is included in the height calculation */
+}
+
+.site-footer a {
+    color: #0066cc; /* Sets the email link color, adjust as needed */
+    text-decoration: none; /* No underline */
+}
+
+.site-footer a:hover {
+    text-decoration: underline; /* Adds underline on hover for better interaction visibility */
+}
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 10px;
+    padding: 20px;
+}
+
+.photo-gallery img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;  /* Ensures images cover their cell without stretching */
+}
+
+/* Specific image styles */
+.photo-gallery .large {
+    grid-column: span 6;  
+    grid-row: span 2;  
+}
+
+.photo-gallery .medium {
+    grid-column: span 4;  
+    grid-row: span 2;  
+}
+
+.photo-gallery .small {
+    grid-column: span 2;  
+    grid-row: span 1;  
+}
+
+.photo-gallery {
+    grid-template-columns: repeat(6, 1fr); 
+}
+
+.photo-gallery .large {
+    grid-column: span 6; 
+}
+
+.photo-gallery .medium, .photo-gallery .small {
+    grid-column: span 3; 
+}
+
+main {
+    width: 80%;
+    margin: 0 auto;
+    background: #f9f9f9;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #004494;
+}
+
+/* Responsive styles for narrow screens */
+@media (max-width: 600px) {
+    body, html {
+        background-image: url('../images/46484326.jpg'); /* path for mobile background */
+    }
+    header {
+        margin-top: 20px; /* Less vertical space on small screens */
+    }
+
+    #page-title {
+        font-size: 1.8em; /* Smaller title on small screens */
+    }
+
+    .navcontainer {
+        flex-direction: column; /* Stack navigation items vertically */
+        align-items: center; /* Center navigation items vertically */
+        padding: 10px 0; /* Reduced padding */
+    }
+
+    .nav-link {
+        margin: 10px 0; /* Space out links vertically */
+        font-size: 1em; /* Smaller font size for links */
+    }
+    .camera-item {
+        flex-direction: column;
+        align-items: flex-start; /* Stack the text and image vertically on narrow screens */
+    }
+    .camera-description, .camera-image {
+        width: 100%; /* Full width on small screens */
+    }
+}
